@@ -1,0 +1,30 @@
+[debug] [2023-11-07T20:59:57.693Z] ----------------------------------------------------------------------
+[debug] [2023-11-07T20:59:57.697Z] Command:       /usr/local/Cellar/node/20.5.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-11-07T20:59:57.697Z] CLI Version:   12.8.0
+[debug] [2023-11-07T20:59:57.698Z] Platform:      darwin
+[debug] [2023-11-07T20:59:57.698Z] Node Version:  v20.5.1
+[debug] [2023-11-07T20:59:57.699Z] Time:          Tue Nov 07 2023 23:59:57 GMT+0300 (Москва, стандартное время)
+[debug] [2023-11-07T20:59:57.699Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-07T20:59:57.772Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-07T20:59:57.773Z] > authorizing via signed-in user (yanis.thomson1@gmail.com)
+[debug] [2023-11-07T20:59:57.774Z] [iam] checking project personal-22643 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-07T20:59:57.775Z] > refreshing access token with scopes: []
+[debug] [2023-11-07T20:59:57.777Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-07T20:59:57.777Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-07T20:59:57.982Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-11-07T20:59:57.982Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-07T20:59:58.005Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/personal-22643:testIamPermissions [none]
+[debug] [2023-11-07T20:59:58.006Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/personal-22643:testIamPermissions x-goog-quota-user=projects/personal-22643
+[debug] [2023-11-07T20:59:58.006Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/personal-22643:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-07T20:59:58.978Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/personal-22643:testIamPermissions 200
+[debug] [2023-11-07T20:59:58.979Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/personal-22643:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-07T20:59:58.980Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/personal-22643 [none]
+[debug] [2023-11-07T20:59:59.286Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/personal-22643 200
+[debug] [2023-11-07T20:59:59.286Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/personal-22643 {"projectId":"personal-22643","projectNumber":"606392307032","displayName":"Personal","name":"projects/personal-22643","resources":{"hostingSite":"personal-22643","realtimeDatabaseInstance":"personal-22643-default-rtdb","storageBucket":"personal-22643.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_c0ce7e74-d6f5-4c86-8ead-440090e3f833"}
+[info] 
+[info] === Deploying to 'personal-22643'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-11-07T20:59:59.299Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/personal-22643/versions [none]
+[debug] [2023-11-07T20:59:59.299Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/personal-22643/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
