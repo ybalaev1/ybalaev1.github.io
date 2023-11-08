@@ -38,3 +38,16 @@ body {
   animation-fill-mode: forwards;
   animation-delay: 0s;
 }
+.footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.ft-btn {
+  background-color: rgb(46, 94, 116);
+}
+.ft-btn:hover {
+  transition: all 1s;
+  animation-delay: 0s;
+  background-color: rgb(6, 47, 75);
+}

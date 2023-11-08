@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Divider } from 'primereact/divider';
 import { getProjects } from './api/request';
 import Card from './components/Card';
+import Footer from './components/footer';
 
 export type project = {
   description: string;
@@ -11,6 +12,7 @@ export type project = {
   buttons: string[];
   position: string;
   borderColor: string;
+  short_name: string;
 }
 const App = () => {
   const [data, setData] = useState<unknown | project[]>();
@@ -20,6 +22,7 @@ const App = () => {
     });
   }, [])
   return (
+    <>
     <div className="container-md body">
       <div className='d-flex'>
         <div className='head-message mb-5'>
@@ -30,24 +33,16 @@ const App = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className='d-flex'>
-        <div className="card flex justify-content-center">
-         <Image height='200' src={Array.isArray(data) && data[0].images[0].url} className='h-25'/>
-        </div>
-         
-          <div>
-            <p className='p-5 py-0 display-6 h2 text-white-50 lh-1'>{Array.isArray(data) && data[0].description}</p>
-          </div>
-      </div> */}
         {Array.isArray(data) && data.map((item: project) => {
           return (
-            <div style={{float: item.position === 'left' ? 'left' : 'right'}}>
+            <div key={item.short_name} style={{float: item.position === 'left' ? 'left' : 'right'}}>
               <Card {...item} />
             </div>
           )
         })}
     </div>
+    <Footer />
+    </>
   );
 }
 
